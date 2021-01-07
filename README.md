@@ -1,10 +1,10 @@
 # C-Shell
-##How To Execute 
+## How To Execute 
 -> just type `make`  and then enter `./a.out`.\
-##How To Stop 
+## How To Stop 
 -> use `ctrl +d` or`quit command`.\
 
-##FILES STRUCTURE 
+## FILES STRUCTURE 
 - makefile      -> used to compile the code\
 - headers.h     -> contains all the libraries included useful for different functions\
 - main.c        -> includes the main shell loop.\
@@ -50,8 +50,8 @@ If Output file does not already exist, output file should be created with permis
 - overwrite if '>' is used.\
 - Append if '>>' is used.\
 
-##Commands Available 
-###Built-in Commands 
+## Commands Available 
+### Built-in Commands 
 - cd       -> It will change the working shell directory.\
              command can be used as --`cd ..`,`cd.`,`cd~` and `cd <Directory name>`.\
 	     using chdir() system call ,shell changes the current working directory. If in any case, any invalid command is given or a file/directory is not 
@@ -99,7 +99,7 @@ If Output file does not already exist, output file should be created with permis
 - overkill   -> It will kill all the background processes.\
 					It can be used as --`overkill`.\
 					
-###Other Commands 
+### Other Commands 
 - pinfo 		-> It will print the process related info of shell or of particular pid.\
  						It can be used as --`pinfo` and `pinfo <pid>`\
  						It will print pid,process status,memory and executable path.\
@@ -122,7 +122,7 @@ If Output file does not already exist, output file should be created with permis
 						will keep executing nightswatch command. when it returns to shell it will give two command prompts (maybe because
 						of enter after input) if command is incorrect, it will give error.\
 	
-###others  
+### others  
 -> It can be used as`commandname` and `commandname &`.\
 - commandname -> It will run the command in foreground using execvp() system call by first 
  							forking a child and parent will wait till the child process ends.
@@ -136,6 +136,6 @@ If Output file does not already exist, output file should be created with permis
  						 	Above defined commands cannot be used as background process.
  						 	It can handle maximum 1000 background process at a time.\
 	
-###Signals  
+### Signals  
 - `CTRL-Z` -> It pushes currently running foreground job into the background, and change its state from running to stopped.\
 - `CTRL_C` -> It should interrupt any currently running foreground job, by sending it the ​ SIGINT​ signal.\
