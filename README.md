@@ -1,8 +1,8 @@
 # C-Shell
 ## How To Execute 
--> just type `make`  and then enter `./a.out`. 
+-> just type `make` to compile and then `./a.out` to execute. 
 ## How To Stop 
--> use `ctrl +d` or`quit command`.
+-> use `ctrl +d` or type`quit`.
 
 ## FILES STRUCTURE 
 - makefile      -> used to compile the code 
@@ -44,7 +44,7 @@
 - overkill.h    -> defines the overkill function.
 - overkill.c    -> implements overkill command.
 \
-Shell will also implement redirection '>','<','>>' and piping '|' and both.\
+Shell will also implement redirection '>', '<', '>>' and piping '|' and both.\
 Error message is displayed if input file doesnot exist.\
 If Output file does not already exist, output file should be created with permissions(0644).
 - overwrite if '>' is used.
@@ -124,13 +124,12 @@ If Output file does not already exist, output file should be created with permis
 						will keep executing nightswatch command. when it returns to shell it will give two command prompts (maybe because
 						of enter after input) if command is incorrect, it will give error.
 	
-### others  
--> It can be used as`commandname` and `commandname &`.
-- **commandname** -> It will run the command in foreground using execvp() system call by first 
+### Foreground and Background Processes.
+- `commandname` -> It will run the command in foreground using execvp() system call by first 
  							forking a child and parent will wait till the child process ends.
  							if command is incorrect, execvp will give error.or in case it is not able to fork child 
  							then also it will give error.
-- **commandname &** -> It will run the command in background using execvp() system call by first
+- `commandname &` -> It will run the command in background using execvp() system call by first
  						 	forking a child , it will not for child to complete rather it provide command prompt and 
  						 	allow to enter more commands.When any background process it will print that command along with exit status 
 							and pid. (then you have to press enter to continue).
